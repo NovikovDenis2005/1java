@@ -38,16 +38,22 @@ public class Route {
         this.points = points;
     }
 
-    @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Поезд №").append(trainNumber)
-          .append(" — ").append(routeName).append("\n");
+        sb.append("Поезд №")
+                .append(trainNumber)
+                .append(" — ")
+                .append(routeName)
+                .append("\n");
         if (points.isEmpty()) {
             sb.append("  Пункты маршрута не заданы\n");
         } else {
             for (int i = 0; i < points.size(); i++) {
-                sb.append("  ").append(i + 1).append(". ").append(points.get(i)).append("\n");
+                sb.append(" ")
+                        .append(i + 1)
+                        .append(". ")
+                        .append(points.get(i))
+                        .append("\n");
             }
         }
         return sb.toString();
